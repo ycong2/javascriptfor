@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>매개인자가 있는 함수</title>
+</head>
+<body>
+    <div id="box">
+        <input type="text" id="num">
+        <button>구구단 나와라</button>     
+    </div>
+    <div class="content">
+        숫자를 넣고 버튼을 클릭해보세요.
+    </div>
+
+    <script>
+        const num = document.getElementById("num");  // 단수를 받을 input객체
+        const btn = document.querySelector("#box button");  //트리거...클릭할 버튼객체  아이디 클래스없으므로 쿼리셀렉터로 접근
+        const content = document.getElementsByClassName("content").item(0);  /// 구구단이 뿌려질 객체  클래스이므로 아이템지정
+        
+        
+        // 버튼을 클릭하면 단수를 받아서 구구단객체에 뿌려라
+        btn.addEventListener('click', function(){
+            var dannum = num.value;  //input태그의 value를 접근하는 식   벨류값은 아무나 못가지므로 input이구나 알수 있음
+            //alert(dannum);  //숫자가 아닌것이 들어오거나 값이 없을때를 대비 if else문으로 처리 
+            gugudan(dannum, content);
+        })
+
+        function gugudan(dan, ele){   //첫번째인자 숫자, 두번째는 태그객체
+            var tags ="";
+            for(i=1; i<10; i++){
+                tags +=`<p>${dan}X${i}=${dan*i}</p>`;
+            }        
+
+            ele.innerHTML = tags;
+            
+        }
+    </script>
+</body>
+</html>

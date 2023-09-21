@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>핸드폰</h3>
+    <p id="hd"></p>
+    <p id="hi"></p>
+
+    <script>
+        //join
+        const myhp = ["010","1234","5678"];
+        const hdtag =  document.getElementById("hd");
+        hdtag.innerHTML = myhp;
+        hdtag.innerHTML = `${myhp[0]} - ${myhp[1]} - ${myhp[2]}`;
+        hdtag.innerHTML = myhp.join("-");  // 조인은 배열을 문자로 처리
+        // document.getElementById("hd").innerHTML = myhp;  //쉼표가 따라들어옴
+
+        
+        //split
+        const hello = "안녕하세요. @여기서@두줄처리되면@좋겠다."
+        const hi = document.getElementById("hi");
+        const helloArr = hello.split("@");
+        
+        for(i in helloArr){
+            hi.innerHTML += helloArr[i]+"<br>";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="gnb">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <script>
+        //세번째 li에 글자넣기
+        // document.querySelector("#gnb li:nth-child(3)").innerHTML = "뭐라고"
+
+        const navi = ["회사소개","제품소개","쇼룸","견적문의","후기"];
+        const lis = document.querySelectorAll("#gnb li");
+        // for(i in navi){
+        //     lis.item(i).innerHTML = navi[i];
+        // }
+
+        // lis.forEach((ele, idx)=>{       //foreach문은 반드시 객체여야 한다.  
+        //     ele.innerHTML = navi[idx];
+        // })
+
+        //견적문의만 안보이게 하기   (조건이 들어왔다 if문 필요)
+        // for(i in navi){
+        //     if( i !=3 ){      //i가 3이 아니면
+        //         lis.item(i).innerHTML = navi[i];
+        //         }
+        //    }
+
+        // lis.forEach((ele, idx)=>{      
+        //     if(idx != 3){
+        //         ele.innerHTML = navi[idx];
+        //     }
+        
+        // })
+
+
+        // 하지만 이것보다 array에서 재정립을 한후 프로그램을 돌리는것이 더 좋다    자바스크립트 배열관련 메소드 총정리 
+    </script>
+</body>
+</html>
